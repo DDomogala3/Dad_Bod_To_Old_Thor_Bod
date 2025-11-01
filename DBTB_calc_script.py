@@ -34,6 +34,8 @@ class OLD_MAN(object):
                 wellness_activity += 2
             elif i == "Beer":
                 wellness_activity -= 3
+            elif i == "Doctor":
+                wellness_activity += 4
         if wellness_activity <= 2:
             print("You are not going for that Old Thor Life, my friend.")
         elif wellness_activity >= 3 and wellness_activity <= 5:
@@ -58,6 +60,7 @@ class OLD_MAN(object):
 
 activity_list_test = ["Bicep Curls","Vitamins","Running 30 minutes"]
 activity_list_test_week_zed = ["CPAP","Vitamins","Beer","Beer","Beer","Beer","Beer","Bicep Curls","Shoulder Press","Seated Row","Beer","CPAP","Running 15 minutes","Vitamins"]
+activity_list_test_week_one = ["CPAP","CPAP","Doctor","Vitamins","Beer","Beer","Beer","Beer","Beer","Beer","Seated Row","Shoulder Press","Bicep Curls"]
 OLD_MAN_TEST = OLD_MAN(activity_list_test)
 #activity_list_test = ["Bicep Curls","Vitamins","Running 30 minutes"]
 print(OLD_MAN_TEST.weekly_list(activity_list_test))
@@ -65,5 +68,6 @@ print(OLD_MAN_TEST.weekly_list(activity_list_test_week_zed))
 wellness_test = OLD_MAN_TEST.weekly_list(activity_list_test_week_zed)
 OLD_MAN_TEST.output_csv(wellness_test, "test.csv",'10.21-25.2025','Celebration')
 #print(OLD_MAN_TEST.assess(activity_list_test_week_zed))
-            
+wellness_test_two = OLD_MAN_TEST.weekly_list(activity_list_test_week_one)
+OLD_MAN_TEST.output_csv(wellness_test_two,"test.csv",'10-27-11-1.2025','Halloween')
                 
