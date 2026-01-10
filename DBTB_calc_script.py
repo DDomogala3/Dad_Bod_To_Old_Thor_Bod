@@ -15,6 +15,7 @@ class OLD_MAN(object):
     #tracks old man activities
     def __init__(self,activity_list):
         self.activity_list = activity_list
+        
     def weekly_list(self, activity_list):
         wellness_activity = 0
         for i in activity_list:
@@ -73,15 +74,16 @@ activity_list_test_week_zed = ["CPAP","Vitamins","Beer","Beer","Beer","Beer","Be
 activity_list_test_week_one = ["CPAP","CPAP","Doctor","Vitamins","Beer","Beer","Beer","Beer","Beer","Beer","Seated Row","Shoulder Press","Bicep Curls"]
 activity_list_test_week_two = ["CPAP","CPAP","Beer","Beer","Beer","Bicep Curls","Bench Press","Leg Press","Squats"]
 activity_list_new_year = ["CPAP","CPAP","Running 15 minutes","Vitamins","Topo Chico","Topo Chico", "Topo Chico", "Salad"] 
-OLD_MAN_TEST = OLD_MAN(activity_list_test)
+#OLD_MAN_TEST = OLD_MAN(activity_list_test)
 #activity_list_test = ["Bicep Curls","Vitamins","Running 30 minutes"]
 #print(OLD_MAN_TEST.weekly_list(activity_list_test))
 #print(OLD_MAN_TEST.weekly_list(activity_list_test_week_zed))
 #wellness_test = OLD_MAN_TEST.weekly_list(activity_list_test_week_zed)
-new_year_week_one = OLD_MAN_TEST.weekly_list(activity_list_new_year)
-print(new_year_week_one)
+new_year_week_one = OLD_MAN(activity_list_new_year)
+new_year_week_one_list = new_year_week_one.weekly_list(activity_list_new_year)
+print(new_year_week_one_list)
 #OLD_MAN_TEST.output_csv(wellness_test, "test.csv",'10.21-25.2025','Celebration')
 #print(OLD_MAN_TEST.assess(activity_list_test_week_zed))
 #wellness_test_two = OLD_MAN_TEST.weekly_list(activity_list_test_week_one)
 #OLD_MAN_TEST.output_csv(wellness_test_two,"test.csv",'10-27-11-1.2025','Halloween')
-OLD_MAN_TEST.output_csv(new_year_week_one,"test.csv",'01-05-2026-01-10-2026','Week One Fast')                
+new_year_week_one.output_csv(new_year_week_one_list,"test.csv",'01-05-2026-01-10-2026','Week One Fast')                
