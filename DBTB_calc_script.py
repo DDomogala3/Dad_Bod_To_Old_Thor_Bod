@@ -69,7 +69,7 @@ class OLD_MAN(object):
         for i in data:
             if i == 3:
                 wellness_activity += 5
-            elif i == "Bicep Curls":
+            elif i == 29:
                 wellness_activity += 3
             elif i == "Shoulder Press":
                 wellness_activity += 1
@@ -77,7 +77,7 @@ class OLD_MAN(object):
                 wellness_activity += 1
             elif i == "Vitamins":
                 wellness_activity += 1
-            elif i == "Running 30 minutes":
+            elif i == 30:
                 wellness_activity += 4
             elif i == 15:
                 wellness_activity += 2
@@ -142,5 +142,9 @@ new_year_week_two.add_item(2015, "Topo Chico")
 new_year_week_two.add_item(4, "Doctor")
 new_year_week_two.add_item(3,"CPAP")
 new_year_week_two.add_item(2,"Beer")
+new_year_week_two.add_item(29,"Bicep Curls")
+new_year_week_two.add_item(30, "Running 30 minutes")
 data2 = (15,19,2,2)
+data3 = (30,29,3,2015,2015,19)
 new_year_week_two.weekly_dict(data2)
+new_year_week_two.weekly_dict(data3)
